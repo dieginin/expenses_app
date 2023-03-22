@@ -9,9 +9,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final titleController = TextEditingController();
-    final amountController = TextEditingController();
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Expenses App',
@@ -20,8 +17,8 @@ class MyApp extends StatelessWidget {
           title: const Text('Expenses'),
         ),
         body: Column(
-          children: [
-            const SizedBox(
+          children: const [
+            SizedBox(
               width: double.infinity,
               child: Card(
                 color: Colors.blue,

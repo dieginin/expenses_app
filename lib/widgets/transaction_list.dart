@@ -17,6 +17,7 @@ class TransactionList extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
+                    width: 100,
                     margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
@@ -25,12 +26,14 @@ class TransactionList extends StatelessWidget {
                         width: 2,
                       ),
                     ),
-                    child: Text(
-                      '\$${tx.amount}',
-                      style: const TextStyle(
-                        color: Colors.purple,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                    child: Center(
+                      child: Text(
+                        '\$${tx.amount}',
+                        style: const TextStyle(
+                          color: Colors.purple,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
