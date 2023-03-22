@@ -24,6 +24,9 @@ class MyApp extends StatelessWidget {
       )
     ];
 
+    final titleController = TextEditingController();
+    final amountController = TextEditingController();
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Expenses App',
@@ -32,8 +35,6 @@ class MyApp extends StatelessWidget {
           title: const Text('Expenses'),
         ),
         body: Column(
-          // crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             const SizedBox(
               width: double.infinity,
@@ -41,6 +42,30 @@ class MyApp extends StatelessWidget {
                 color: Colors.blue,
                 elevation: 5,
                 child: Text('CHART!'),
+              ),
+            ),
+            Card(
+              elevation: 5,
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TextField(
+                      controller: titleController,
+                      decoration: const InputDecoration(labelText: 'Title'),
+                    ),
+                    TextField(
+                      controller: amountController,
+                      decoration: const InputDecoration(labelText: 'Amount'),
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(foregroundColor: Colors.purple),
+                      onPressed: () {},
+                      child: const Text('Add Transaction'),
+                    )
+                  ],
+                ),
               ),
             ),
             Column(
