@@ -46,9 +46,14 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = ThemeData(primarySwatch: Colors.blue);
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Expenses App',
+      theme: theme.copyWith(
+        colorScheme: theme.colorScheme.copyWith(secondary: Colors.amber),
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Expenses'),
