@@ -29,6 +29,7 @@ class TransactionList extends StatelessWidget {
                 child: Center(
                   child: Text(
                     '\$${transactions[i].amount.toStringAsFixed(2)}',
+                    textAlign: TextAlign.center,
                     style: const TextStyle(
                       color: Colors.purple,
                       fontSize: 20,
